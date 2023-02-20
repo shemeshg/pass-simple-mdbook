@@ -1,2 +1,3 @@
-# pass-simple-mdbook
-pass simple mdbook documentation
+# pass simple mdbook
+
+<https://shemeshg.github.io/pass-simple-mdbook/>
