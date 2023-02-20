@@ -8,6 +8,11 @@
 
     This is required if you compile yourself, or downlaoded the static linked.
 
+2. Create menu shortcut, see `pass-simple.desktop`.
+3. Try your luck makeing `ydotool` autotype.
+
+    See `setting` tab in `pass-simple`
+
 ## If compile yourself
 
 1. install qt <https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux>
@@ -25,9 +30,3 @@
     cmake --build .
     ```
 
-## compiled or static linked
-
-1. Create menu shortcut, see `pass-simple.desktop`.
-2. Try your luck makeing `ydotool` autotype.
-
-    See `setting` tab in `pass-simple`
