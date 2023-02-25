@@ -13,7 +13,7 @@
     ```
 
     * If pass is not ok, follow this:
-    https://www.redhat.com/sysadmin/management-password-store
+    <https://www.redhat.com/sysadmin/management-password-store>
 
       This document will walk through creating Private and public keys, and init the repository (setup the `.gpgid` authorization file).
 

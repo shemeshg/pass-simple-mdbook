@@ -2,12 +2,12 @@
 
 [Introduction](README.md)
 
-# install
+# For users
   - [install_linux](install_linux.md)
   - [install_mac](install_mac.md)
   - [all platforms](install.md)
 
-# setup and deploy
+# For developers
   - [git_clone_setup](git_clone_setup.md)
   - [linux_setup](linux_setup.md)
   - [linux_deploy](linux_deploy.md)
