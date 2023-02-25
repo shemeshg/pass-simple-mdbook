@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">install</li><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">2.</strong> install_mac</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.</strong> all platforms</a></li><li class="chapter-item expanded affix "><li class="part-title">setup and deploy</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">4.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">5.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">6.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">7.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">8.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">9.</strong> LICENSE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">2.</strong> install_mac</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.</strong> all platforms</a></li><li class="chapter-item expanded affix "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">4.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">5.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">6.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">7.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">8.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">9.</strong> LICENSE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -223,7 +223,7 @@ pass edit whatever
 <ul>
 <li>
 <p>If pass is not ok, follow this:
-https://www.redhat.com/sysadmin/management-password-store</p>
+<a href="https://www.redhat.com/sysadmin/management-password-store">https://www.redhat.com/sysadmin/management-password-store</a></p>
 <p>This document will walk through creating Private and public keys, and init the repository (setup the <code>.gpgid</code> authorization file).</p>
 </li>
 </ul>
@@ -325,9 +325,13 @@ zip -r Ubuntu20.04StaticFolderVer0.25.zip Ubuntu20.04StaticFolderVer0.25
 
  /Volumes/FAST/Qt/6.4.2/macos/bin/macdeployqt Pass\ simple.app -qmldir=/Volumes/RAM_Disk_4G/pass-simple -dmg
 
-change name to  pass-simple-osx_0.26.0.dmg
+change name to  pass-simple-osx_0.30.0.dmg
 
-sha256sum pass-simple-osx_0.26.0.dmg
+sftp iuqwer9@frs.sourceforge.net
+sftp&gt; cd /home/frs/project/pass-simple
+sftp&gt; put pass-simple-osx_0.30.0.dmg
+
+sha256sum pass-simple-osx_0.30.0.dmg
 
 cd /Volumes/FAST/develop/homebrew-tap/Casks/
 
