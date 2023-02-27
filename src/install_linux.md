@@ -6,12 +6,15 @@
     suto apt-get -y  install pass gnupg2 libyaml-cpp-dev libgpgme-dev libgpgmepp-dev
     ```
 
-    This is required if you compile yourself, or downlaoded the static linked.
+    This is required if you compile yourself, or download the static linked.
 
 2. Create menu shortcut, see `pass-simple.desktop`.
-3. Try your luck makeing `ydotool` autotype.
+3. Try your luck make `ydotool` autotype.
 
-    See `setting` tab in `pass-simple`
+    Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
+    will get ydotool work under root only.
+
+    See `setting` tab in `pass-simple`, and set autotype accordingly.
 
 ## If compile yourself
 
