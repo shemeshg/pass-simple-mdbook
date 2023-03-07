@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -349,6 +351,7 @@ code .
 On ubuntu 20.04 - already installed and configured for wayland</li>
 <li><a href="https://github.com/jbeder/yaml-cpp/">https://github.com/jbeder/yaml-cpp/</a></li>
 <li>Icons by <a href="https://icons8.com/icons/">https://icons8.com/icons/</a></li>
+<li>Icons by <a href="https://developers.google.com/fonts/docs/material_icons">https://developers.google.com/fonts/docs/material_icons</a></li>
 <li><a href="https://github.com/keepassxreboot/keepassxc/tree/develop/src/totp">keepassxc totp</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><p>MIT License</p>
