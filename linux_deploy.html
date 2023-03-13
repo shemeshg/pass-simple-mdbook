@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>linux_deploy - pass simple documentation</title>
+        <title>linux deploy - pass simple documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">1.</strong> all platforms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">1.2.</strong> install_mac</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">2.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">3.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html" class="active"><strong aria-hidden="true">4.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">5.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">6.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">7.</strong> LICENSE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">1.</strong> all platforms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">1.2.</strong> install_mac</a></li></ol></li><li class="chapter-item expanded "><a href="keyboard_shortcuts.html"><strong aria-hidden="true">2.</strong> keyboard shortcuts</a></li><li class="chapter-item expanded affix "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">3.</strong> git clone and setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html" class="active"><strong aria-hidden="true">4.</strong> linux deploy</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">4.1.</strong> linux_setup</a></li></ol></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">5.</strong> macos deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">6.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">7.</strong> LICENSE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,11 +145,13 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="build-and-deploy"><a class="header" href="#build-and-deploy">build and deploy</a></h1>
-<p>shared:</p>
+<h2 id="setup-environment"><a class="header" href="#setup-environment">Setup environment</a></h2>
+<p><a href="linux_setup.html">linux_setup</a></p>
+<h2 id="shared-compilation"><a class="header" href="#shared-compilation">shared compilation</a></h2>
 <pre><code class="language-bash">~/Qt/6.2.4/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
 cmake --build .
 </code></pre>
-<p>or build static</p>
+<h2 id="static-compilation"><a class="header" href="#static-compilation">static compilation</a></h2>
 <pre><code class="language-bash">mkdir Ubuntu20.04StaticFolderVer0.25
 cd Ubuntu20.04StaticFolderVer0.25/
  /home/ubuntu/Qt6.42Static/bin/qt-cmake  -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
@@ -163,11 +165,11 @@ zip -r Ubuntu20.04StaticFolderVer0.25.zip Ubuntu20.04StaticFolderVer0.25
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="linux_setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="git_clone_setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="macos_deploy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="linux_setup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -177,11 +179,11 @@ zip -r Ubuntu20.04StaticFolderVer0.25.zip Ubuntu20.04StaticFolderVer0.25
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="linux_setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="git_clone_setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="macos_deploy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="linux_setup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

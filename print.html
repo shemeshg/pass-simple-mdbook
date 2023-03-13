@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">1.</strong> all platforms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">1.2.</strong> install_mac</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">2.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">3.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">4.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">5.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">6.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">7.</strong> LICENSE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">1.</strong> all platforms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">1.2.</strong> install_mac</a></li></ol></li><li class="chapter-item expanded "><a href="keyboard_shortcuts.html"><strong aria-hidden="true">2.</strong> keyboard shortcuts</a></li><li class="chapter-item expanded affix "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">3.</strong> git clone and setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">4.</strong> linux deploy</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">4.1.</strong> linux_setup</a></li></ol></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">5.</strong> macos deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">6.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">7.</strong> LICENSE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -276,6 +276,12 @@ defaults write org.gpgtools.common UseKeychain -bool NO
 <h2 id="dev-packages"><a class="header" href="#dev-packages">dev packages</a></h2>
 <pre><code class="language-bash">brew install gpgme libgpg-error pinentry-mac yaml-cpp
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="keyboard-shortcuts"><a class="header" href="#keyboard-shortcuts">keyboard shortcuts</a></h1>
+<p><strong>Cmd +/-</strong> zoomin/out</p>
+<p><strong>Cmd L</strong> Toggle text and YAML in preview mode.</p>
+<p><strong>Cmd s</strong> Save in preview mode.</p>
+<p><strong>Cmd e</strong> Toggle Preview On/Off</p>
+<p><strong>Cmd o</strong> Open externally with <code>vscode</code> when Preview is OFF.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="git-clone"><a class="header" href="#git-clone">git clone</a></h1>
 <p>clone</p>
 <pre><code class="language-bash">gh repo clone shemeshg/pass-simple-qt
@@ -286,6 +292,22 @@ git submodule update --init --recursive
 git submodule update --recursive
 </code></pre>
 <p>checkout master for all submodules</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-and-deploy"><a class="header" href="#build-and-deploy">build and deploy</a></h1>
+<h2 id="setup-environment"><a class="header" href="#setup-environment">Setup environment</a></h2>
+<p><a href="linux_setup.html">linux_setup</a></p>
+<h2 id="shared-compilation"><a class="header" href="#shared-compilation">shared compilation</a></h2>
+<pre><code class="language-bash">~/Qt/6.2.4/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
+cmake --build .
+</code></pre>
+<h2 id="static-compilation"><a class="header" href="#static-compilation">static compilation</a></h2>
+<pre><code class="language-bash">mkdir Ubuntu20.04StaticFolderVer0.25
+cd Ubuntu20.04StaticFolderVer0.25/
+ /home/ubuntu/Qt6.42Static/bin/qt-cmake  -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
+cmake --build .
+cd ..
+zip -r Ubuntu20.04StaticFolderVer0.25.zip Ubuntu20.04StaticFolderVer0.25
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-env"><a class="header" href="#linux-env">Linux env</a></h1>
 <h2 id="static-qt"><a class="header" href="#static-qt">static qt</a></h2>
 <p>Getting Ready</p>
@@ -324,20 +346,6 @@ cd qt-everywhere-src-6.2.4
 <p>build and install</p>
 <pre><code class="language-bash">cmake --build .
 cmake --install .
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="build-and-deploy"><a class="header" href="#build-and-deploy">build and deploy</a></h1>
-<p>shared:</p>
-<pre><code class="language-bash">~/Qt/6.2.4/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
-cmake --build .
-</code></pre>
-<p>or build static</p>
-<pre><code class="language-bash">mkdir Ubuntu20.04StaticFolderVer0.25
-cd Ubuntu20.04StaticFolderVer0.25/
- /home/ubuntu/Qt6.42Static/bin/qt-cmake  -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
-cmake --build .
-cd ..
-zip -r Ubuntu20.04StaticFolderVer0.25.zip Ubuntu20.04StaticFolderVer0.25
-
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pass-simple--deploy-macos"><a class="header" href="#pass-simple--deploy-macos">pass simple  deploy macos</a></h1>
 <pre><code class="language-bash">cd build-pass-simple-qt-Qt_6_4_2_for_macOS-Release/
