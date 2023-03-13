@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">2.</strong> install_mac</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.</strong> all platforms</a></li><li class="chapter-item expanded affix "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">4.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">5.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">6.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">7.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">8.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">9.</strong> LICENSE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">For users</li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">1.</strong> all platforms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install_linux.html"><strong aria-hidden="true">1.1.</strong> install_linux</a></li><li class="chapter-item expanded "><a href="install_mac.html"><strong aria-hidden="true">1.2.</strong> install_mac</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">For developers</li><li class="chapter-item expanded "><a href="git_clone_setup.html"><strong aria-hidden="true">2.</strong> git_clone_setup</a></li><li class="chapter-item expanded "><a href="linux_setup.html"><strong aria-hidden="true">3.</strong> linux_setup</a></li><li class="chapter-item expanded "><a href="linux_deploy.html"><strong aria-hidden="true">4.</strong> linux_deploy</a></li><li class="chapter-item expanded "><a href="macos_deploy.html"><strong aria-hidden="true">5.</strong> macos_deploy</a></li><li class="chapter-item expanded affix "><li class="part-title">misc</li><li class="chapter-item expanded "><a href="SBOM.html"><strong aria-hidden="true">6.</strong> SBOM</a></li><li class="chapter-item expanded "><a href="LICENSE.html"><strong aria-hidden="true">7.</strong> LICENSE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,6 +150,58 @@
 <p>Multi-platform GUI for <a href="https://www.passwordstore.org/">pass</a>, the standard unix password manager</p>
 <p><a href="https://sourceforge.net/projects/pass-simple/">https://sourceforge.net/projects/pass-simple/</a></p>
 <p>Screenshots: <a href="https://github.com/shemeshg/pass-simple-qt/wiki">https://github.com/shemeshg/pass-simple-qt/wiki</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="install-platform-specific"><a class="header" href="#install-platform-specific">install platform specific</a></h1>
+<ul>
+<li><a href="install_linux.html">install_linux</a></li>
+<li><a href="install_mac.html">install_mac</a></li>
+</ul>
+<h2 id="for-all-platforms"><a class="header" href="#for-all-platforms">For all platforms</a></h2>
+<ol>
+<li>
+<p>Create a note with pass command line, ensure all well</p>
+<pre><code class="language-bash">pass
+pass edit whatever
+</code></pre>
+<ul>
+<li>
+<p>If pass is not ok, follow this:
+<a href="https://www.redhat.com/sysadmin/management-password-store">https://www.redhat.com/sysadmin/management-password-store</a></p>
+<p>This document will walk through creating Private and public keys, and init the repository (setup the <code>.gpgid</code> authorization file).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ensure you can read and write the test note created before.</p>
+</li>
+<li>
+<p>setup git</p>
+<pre><code class="language-bash">export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
+pass git init
+</code></pre>
+<p>or do it manually with</p>
+<pre><code class="language-bash">git init
+echo '*.gpg diff=gpg' &gt; &quot;.gitattributes&quot;
+git config --local diff.gpg.binary true
+git config --local diff.gpg.textconv &quot;gpg -d --quiet --yes --compress-algo=none --no-encrypt-to&quot;
+</code></pre>
+</li>
+<li>
+<p>Ensure you can <code>git commit -am &quot;commit&quot;</code>.</p>
+</li>
+<li>
+<p>create additional change and ensure you can <code>git diff</code>.</p>
+</li>
+<li>
+<p>Backup your store to other drive</p>
+<p><a href="https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git">https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git</a></p>
+</li>
+<li>
+<p>Ensure you can <code>git pull</code> and <code>git push</code></p>
+</li>
+<li>
+<p>Set <code>restoreWindows</code> in <code>vscode</code> to <code>folder</code> or <code>none</code></p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu-specsific"><a class="header" href="#ubuntu-specsific">Ubuntu specsific</a></h1>
 <ol>
 <li>
@@ -166,6 +218,18 @@
 <p>Manual compilation <a href="https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on">https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on</a> 
 will get ydotool work under root only.</p>
 <p>See <code>setting</code> tab in <code>pass-simple</code>, and set autotype accordingly.</p>
+</li>
+</ol>
+<h2 id="if-downlaoding-the-staticlly-deployed-zip-file-from-sourceforge"><a class="header" href="#if-downlaoding-the-staticlly-deployed-zip-file-from-sourceforge">If downlaoding the staticlly deployed zip file from sourceforge</a></h2>
+<ol>
+<li>
+<p>Extract the zip file.</p>
+</li>
+<li>
+<p>run the executable</p>
+</li>
+<li>
+<p>Create desktop shortcut</p>
 </li>
 </ol>
 <h2 id="if-compile-yourself"><a class="header" href="#if-compile-yourself">If compile yourself</a></h2>
@@ -212,55 +276,6 @@ defaults write org.gpgtools.common UseKeychain -bool NO
 <h2 id="dev-packages"><a class="header" href="#dev-packages">dev packages</a></h2>
 <pre><code class="language-bash">brew install gpgme libgpg-error pinentry-mac yaml-cpp
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="install-platform-specific"><a class="header" href="#install-platform-specific">install platform specific</a></h1>
-<ul>
-<li><a href="install_linux.html">install_linux</a></li>
-<li><a href="install_mac.html">install_mac</a></li>
-</ul>
-<h2 id="for-all-platforms"><a class="header" href="#for-all-platforms">For all platforms</a></h2>
-<ol>
-<li>
-<p>Create a note with pass command line, ensure all well</p>
-<pre><code class="language-bash">pass
-pass edit whatever
-</code></pre>
-<ul>
-<li>
-<p>If pass is not ok, follow this:
-<a href="https://www.redhat.com/sysadmin/management-password-store">https://www.redhat.com/sysadmin/management-password-store</a></p>
-<p>This document will walk through creating Private and public keys, and init the repository (setup the <code>.gpgid</code> authorization file).</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Ensure you can read and write the test note created before.</p>
-</li>
-<li>
-<p>setup git</p>
-<pre><code class="language-bash">export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
-pass git init
-</code></pre>
-<p>or do it manually with</p>
-<pre><code class="language-bash">git init
-echo '*.gpg diff=gpg' &gt; &quot;.gitattributes&quot;
-git config --local diff.gpg.binary true
-git config --local diff.gpg.textconv &quot;gpg -d --quiet --yes --compress-algo=none --no-encrypt-to&quot;
-</code></pre>
-</li>
-<li>
-<p>Ensure you can <code>git commit -am &quot;commit&quot;</code>.</p>
-</li>
-<li>
-<p>create additional change and ensure you can <code>git diff</code>.</p>
-</li>
-<li>
-<p>Backup your store to other drive</p>
-<p>https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git</p>
-</li>
-<li>
-<p>Ensure you can <code>git pull</code> and <code>git push</code></p>
-</li>
-</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="git-clone"><a class="header" href="#git-clone">git clone</a></h1>
 <p>clone</p>
 <pre><code class="language-bash">gh repo clone shemeshg/pass-simple-qt
