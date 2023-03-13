@@ -1,13 +1,17 @@
 # build and deploy
 
-shared:
+## Setup environment
+
+[linux_setup](linux_setup.md)
+
+## shared compilation
 
 ```bash
 ~/Qt/6.2.4/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
 cmake --build .
 ```
 
-or build static
+## static compilation
 
 ```bash
 mkdir Ubuntu20.04StaticFolderVer0.25

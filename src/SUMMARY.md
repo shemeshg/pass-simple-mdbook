@@ -3,15 +3,17 @@
 [Introduction](README.md)
 
 # For users
-  - [all platforms](install.md)
-    - [install_linux](install_linux.md)
-    - [install_mac](install_mac.md)
+- [all platforms](install.md)
+  - [install_linux](install_linux.md)
+  - [install_mac](install_mac.md)
+- [keyboard shortcuts](keyboard_shortcuts.md)
 
 # For developers
-  - [git_clone_setup](git_clone_setup.md)
+
+- [git clone and setup](git_clone_setup.md)
+- [linux deploy](linux_deploy.md)
   - [linux_setup](linux_setup.md)
-  - [linux_deploy](linux_deploy.md)
-  - [macos_deploy](macos_deploy.md)
+- [macos deploy](macos_deploy.md)
 
 # misc
   - [SBOM](SBOM.md)
