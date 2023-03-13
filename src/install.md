@@ -35,13 +35,14 @@
     git config --local diff.gpg.textconv "gpg -d --quiet --yes --compress-algo=none --no-encrypt-to"
     ```
 
-3. Ensure you can `git commit -am "commit"`.
+4. Ensure you can `git commit -am "commit"`.
 
-4. create additional change and ensure you can `git diff`.
+5. create additional change and ensure you can `git diff`.
 
-5. Backup your store to other drive
+6. Backup your store to other drive
 
-    https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git
+    <https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git>
 
-6. Ensure you can `git pull` and `git push`
+7. Ensure you can `git pull` and `git push`
 
+8. Set `restoreWindows` in `vscode` to `folder` or `none`

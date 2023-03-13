@@ -3,9 +3,9 @@
 [Introduction](README.md)
 
 # For users
-  - [install_linux](install_linux.md)
-  - [install_mac](install_mac.md)
   - [all platforms](install.md)
+    - [install_linux](install_linux.md)
+    - [install_mac](install_mac.md)
 
 # For developers
   - [git_clone_setup](git_clone_setup.md)

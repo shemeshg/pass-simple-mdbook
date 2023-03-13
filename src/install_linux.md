@@ -16,6 +16,14 @@
 
     See `setting` tab in `pass-simple`, and set autotype accordingly.
 
+## If downlaoding the staticlly deployed zip file from sourceforge
+
+1. Extract the zip file.
+
+2. run the executable
+
+3. Create desktop shortcut
+
 ## If compile yourself
 
 1. install qt <https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux>
