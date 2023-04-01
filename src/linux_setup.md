@@ -44,7 +44,7 @@ config
 * Or config static
 
 ```bash
-./configure -release -opensource -confirm-license -prefix ~/Qt6.24Static
+./configure -release -static -opensource -confirm-license -prefix ~/Qt6.24Static
 ```
 
 build and install
