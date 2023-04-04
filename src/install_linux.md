@@ -1,28 +1,19 @@
 # Ubuntu specsific
 
-1. Install dependencies
+1. Download the deb file and install
+
+1. Install dependencies if compile yourself (not using the deb file)
 
     ```bash
     suto apt-get -y  install pass gnupg2 libyaml-cpp-dev libgpgme-dev libgpgmepp-dev
     ```
 
-    This is required if you compile yourself, or download the static linked.
-
-2. Create menu shortcut, see `pass-simple.desktop`.
-3. Try your luck make `ydotool` autotype.
+1. Try your luck make `ydotool` autotype.
 
     Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
     will get ydotool work under root only.
 
     See `setting` tab in `pass-simple`, and set autotype accordingly.
-
-## If downlaoding the staticlly deployed zip file from sourceforge
-
-1. Extract the zip file.
-
-2. run the executable
-
-3. Create desktop shortcut
 
 ## If compile yourself
 
