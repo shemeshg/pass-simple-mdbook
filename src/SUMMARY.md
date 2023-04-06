@@ -10,4 +10,4 @@
 
 # misc
   - [SBOM](SBOM.md)
-  - [LICENSE](https://github.com/shemeshg/pass-simple-qt/blob/main/LICENSE)
+  - [LICENSE](LICENSE.md)
