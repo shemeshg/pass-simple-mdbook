@@ -4,8 +4,10 @@
 
 **Cmd L** Toggle text and YAML in preview mode.
 
-**Cmd s** Save in preview mode.
+**Cmd M** Toggle Markdown.
 
-**Cmd e** Toggle Preview On/Off
+**Cmd S** Save in preview mode.
 
-**Cmd o** Open externally with `vscode` when Preview is OFF.
+**Cmd E** Toggle Preview On/Off
+
+**Cmd O** Open externally with `vscode` when Preview is OFF.
