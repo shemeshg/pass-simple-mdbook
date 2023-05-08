@@ -17,9 +17,9 @@
     ```bash
     brew install --cask shemeshg/homebrew-tap/pass-simple
     ```
-1. Dark mode, looks bad with default QML macos style.
+1. Dark mode not supported.
 
-    ```
+    ```bash
     defaults write PassSimple.shemeshg.com NSRequiresAquaSystemAppearance -bool Yes
     ```
 
