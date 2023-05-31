@@ -12,14 +12,14 @@
     pass edit whatever
     ```
 
-    * If pass is not ok, follow this:
+    * If pass store not initialized, follow this:
     <https://www.redhat.com/sysadmin/management-password-store>
 
       This document will walk through creating Private and public keys, and init the repository (setup the `.gpgid` authorization file).
 
-2. Ensure you can read and write the test note created before.
+1. Ensure you can read and write the test note created before.
 
-3. setup git
+1. setup git
 
     ```bash
     export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
@@ -35,14 +35,20 @@
     git config --local diff.gpg.textconv "gpg -d --quiet --yes --compress-algo=none --no-encrypt-to"
     ```
 
-4. Ensure you can `git commit -am "commit"`.
+1. Ensure you can `git commit -am "commit"`.
 
-5. create additional change and ensure you can `git diff`.
+1. create additional change and ensure you can `git diff ~1` and see last change in clear text.
 
-6. Backup your store to other drive
+1. Backup your store to other drive or remote ssh server
 
     <https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git>
 
-7. Ensure you can `git pull` and `git push`
+1. Ensure you can `git pull` and `git push`
 
-8. Set `restoreWindows` in `vscode` to `folder` or `none`
+1. Protect your '.gpg_id' or specific folders with Git-Enforced Policy (`git server and client hooks`)
+
+    <https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy>
+
+
+
+1. Set `restoreWindows` in `vscode` to `folder` or `none`
