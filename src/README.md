@@ -21,5 +21,13 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```Md
     # Header
 
-    [ref to a/b.pgp](a/b)
+    [ref to a/b file.pgp](<a/b file>)
+
+    or <a/b file>
+    ```
+
+- Since `pass simple` store `totp` in `yaml`, read generated totp with
+
+    ```bash
+    gopass show FAST/passwords/sourceforge|yq '.["totp"]' | xargs -I {} oathtool -b --totp {}
     ```
