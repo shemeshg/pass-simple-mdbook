@@ -26,8 +26,10 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     or <a/b file>
     ```
 
-- Since `pass simple` store `totp` in `yaml`, read generated totp with
+## Yaml
+
+- Since `pass simple` store `totp` in `yaml`, to read generated totp use
 
     ```bash
-    gopass show FAST/passwords/sourceforge|yq '.["totp"]' | xargs -I {} oathtool -b --totp {}
+    gopass show fileName|yq '.["totp"]' | xargs -I {} oathtool -b --totp {}
     ```
