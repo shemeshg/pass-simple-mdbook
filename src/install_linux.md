@@ -1,4 +1,4 @@
-# Ubuntu specsific
+# Ubuntu specific
 
 1. Download the deb file and install
 

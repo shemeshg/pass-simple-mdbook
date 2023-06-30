@@ -2,6 +2,7 @@
 
 * [install_linux](install_linux.md)
 * [install_mac](install_mac.md)
+* [install_windows](install_windows.md)
 
 ## For all platforms - recommended
 

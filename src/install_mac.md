@@ -1,4 +1,4 @@
-# Mac specsific
+# Mac specific
 
 1. Install pass
 
