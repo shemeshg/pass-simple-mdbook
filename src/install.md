@@ -51,11 +51,17 @@ Optional/Advanced
 
     <https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy>
 
+1. Use disk encryption - `tomb`/`veracrypt` or mac's `diskutil` to protect the repository itself.
+    
+    password for the disk encryption can be stored in the default repository (`~/.password-store/`), and linked with `ln -s` (like `mounts` in `gopass`)
+
 1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive)
 
+    Use rotate `subkey` for different devices.
 
 1. Backup your store to other drive or remote ssh server
 
     <https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git>
 
-1. Ensure you can `git pull` and `git push`    
+    Ensure you can `git pull` and `git push`    
+
