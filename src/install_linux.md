@@ -8,12 +8,22 @@
     suto apt-get -y  install pass gnupg2 libyaml-cpp-dev libgpgme-dev libgpgmepp-dev
     ```
 
-1. Try your luck make `ydotool` autotype.
+1. Install `ydotool` autotype.
 
-    Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
-    will get ydotool work under root only.
+    For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
+    
+    - start `ydotool` server manually
 
-    See `setting` tab in `pass-simple`, and set autotype accordingly.
+    ```bash
+    sudo -b ydotoold -m --socket-path="/run/user/1000/.ydotool_socket" --socket-own="$(id -u):$(id -g)"
+    
+    ```
+
+    - `setting` tab in `pass-simple`, and set autotype to 
+    
+    ```bash
+    dotool type sequence
+    ```
 
 ## If compile yourself
 
