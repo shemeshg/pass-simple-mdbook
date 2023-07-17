@@ -55,9 +55,9 @@ Optional/Advanced
     
     password for the disk encryption can be stored in the default repository (`~/.password-store/`), and linked with `ln -s` (like `mounts` in `gopass`)
 
-1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive)
+1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive) 
 
-    Use rotate `subkey` for different devices.
+    Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices.
 
 1. Backup your store to other drive or remote ssh server
 
@@ -65,3 +65,5 @@ Optional/Advanced
 
     Ensure you can `git pull` and `git push`    
 
+1. protect application configuration file as readonly with `chmod`, or 
+[AppArmor](https://ubuntu.com/server/docs/security-apparmor)
