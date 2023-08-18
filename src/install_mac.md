@@ -33,5 +33,5 @@
 ## dev packages
 
 ```bash
-brew install gpgme libgpg-error pinentry-mac yaml-cpp
+brew install gpgme libgpg-error pinentry-mac
 ```

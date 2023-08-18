@@ -5,7 +5,7 @@
 1. Install dependencies if compile yourself (not using the deb file)
 
     ```bash
-    suto apt-get -y  install pass gnupg2 libyaml-cpp-dev libgpgme-dev libgpgmepp-dev
+    suto apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev
     ```
 
 1. Install `ydotool` autotype.
