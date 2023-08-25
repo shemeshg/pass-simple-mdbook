@@ -1,4 +1,4 @@
-# [pass simple](https://github.com/shemeshg/pass-simple-qt)
+# ![Alt text](icon.png) [pass simple](https://github.com/shemeshg/pass-simple-qt)
 
 Similar to [QtPass](https://github.com/IJHack/QtPass):
 
