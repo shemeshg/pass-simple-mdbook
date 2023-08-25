@@ -1,5 +1,7 @@
 # Ubuntu specific
 
+If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file and run the executable. since the `.deb` file is already `qt-deployed`. 
+
 1. Download the deb file and install
 
 1. Install dependencies if compile yourself (not using the deb file)
