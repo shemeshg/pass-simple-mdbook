@@ -17,7 +17,7 @@
     ```bash
     brew install --cask shemeshg/homebrew-tap/pass-simple
     ```
-1. Dark mode not supported.
+1. Optionally disable Dark mode.
 
     ```bash
     defaults write PassSimple.shemeshg.com NSRequiresAquaSystemAppearance -bool Yes
