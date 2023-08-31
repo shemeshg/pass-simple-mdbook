@@ -57,7 +57,8 @@ Optional/Advanced
 
 1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive) 
 
-    Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices.
+    Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices, 
+    or [ASDK](https://www.gnupg.org/blog/20230321-adsk.html) for team members.
 
 1. Backup your store to other drive or remote ssh server
 
