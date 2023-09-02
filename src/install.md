@@ -22,18 +22,19 @@
 
 1. setup git
 
-    ```bash
-    export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
-    pass git init
-    ```
-
-    or do it manually with
+    Prefer manually to ensure `gpg` absolute path.
 
     ```bash
     git init
     echo '*.gpg diff=gpg' > ".gitattributes"
     git config --local diff.gpg.binary true
-    git config --local diff.gpg.textconv "gpg -d --quiet --yes --compress-algo=none --no-encrypt-to"
+    git config --local diff.gpg.textconv "`which gpg` -d --quiet --yes --compress-algo=none --no-encrypt-to"
+    ```
+    Or using pass, and correct the `diff.gpg.textconv` with above.
+
+    ```bash
+    export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
+    pass git init
     ```
 
 1. Ensure you can `git commit -am "commit"`.
