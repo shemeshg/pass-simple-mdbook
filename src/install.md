@@ -22,7 +22,7 @@
 
 1. setup git
 
-    Prefer manually to ensure `gpg` absolute path.
+    Prefer manually to ensure `gpg` absolute path, also mandatory after `git clone`
 
     ```bash
     git init
