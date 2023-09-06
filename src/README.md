@@ -35,3 +35,14 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```bash
     gopass show fileName|yq '.["totp"]' | xargs -I {} oathtool -b --totp {}
     ```
+- text starts with `-` or `#` can not be `YAML`, and considered standard text.
+
+## Fields type
+
+- textedit - supports `autotype` of selected text and `YAML` read only view.
+- texteditMasked 
+- text
+- url
+- password
+- totp
+- datetime
