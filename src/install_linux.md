@@ -14,14 +14,13 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
     
-    - start `ydotool` server manually
+- `sudo service ydotool start`
+- `sudo systemctl enable ydotool`
+- ensure `export YDOTOOL_SOCKET=/tmp/.ydotool_socket` in `/opt/pass-simple/bin/pass-simple.sh`.
 
-    ```bash
-    sudo -b ydotoold -m --socket-path="/run/user/1000/.ydotool_socket" --socket-own="$(id -u):$(id -g)"
+- Open `pass-simple` and select `setting`. 
     
-    ```
-
-    - `setting` tab in `pass-simple`, and set autotype to 
+    set autotype to 
     
     ```bash
     dotool type sequence
