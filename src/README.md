@@ -37,6 +37,8 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```
 - text starts with `-` or `#` can not be `YAML`, and is considered standard text.
 
+- Changing the YAML scheme without using the text view will delete none `pass simple` nested fields.
+
 ## Fields type
 
 - textedit - supports 
