@@ -1,8 +1,8 @@
 # ![Alt text](icon.png) [pass simple](https://github.com/shemeshg/pass-simple-qt)
 
-Similar to [QtPass](https://github.com/IJHack/QtPass):
-
 Multi-platform GUI for [pass](https://www.passwordstore.org/), the standard unix password manager
+
+The advantages of `pass simple` include the use of GPGME (native C++), as well as support for YAML and Markdown. If you prefer to use a password in the first line without YAML, you might consider using [QtPass](https://github.com/IJHack/QtPass).
 
 Homepage: <https://sourceforge.net/projects/pass-simple/>
 
