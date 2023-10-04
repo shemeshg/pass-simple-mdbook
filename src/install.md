@@ -39,7 +39,7 @@
 
 1. Ensure you can `git commit -am "commit"`.
 
-1. create additional change and ensure you can `git diff ~1` and see last change in clear text.
+1. create additional change and ensure you can `git diff HEAD~` and see last change in clear text.
 
 1. Set `restoreWindows` in `vscode` to `folder` or `none`
 
