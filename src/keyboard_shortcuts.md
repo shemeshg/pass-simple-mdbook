@@ -2,9 +2,11 @@
 
 **Cmd S** Save in preview mode.
 
-**Cmd Y** Add,cmmit,pull and push.
+**Cmd f** Toggle find/search.
 
 **Cmd M** Toggle Markdown.
+
+**Cmd Y** Add,cmmit,pull and push.
 
 **Cmd L** Toggle text and YAML in preview mode.
 
@@ -12,7 +14,7 @@
 
 **Cmd O** Open externally with `vscode` when Preview is OFF.
 
-**Cmd +/-** Zoomin/out.
+**Cmd +/-** Zoom in/out.
 
 
 
