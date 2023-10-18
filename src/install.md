@@ -25,8 +25,10 @@
     Prefer manually to ensure `gpg` absolute path, also mandatory after `git clone`
 
     ```bash
-    git init
+    # New repository
+    git init  
     echo '*.gpg diff=gpg' > ".gitattributes"
+    # New and Cloned repository
     git config --local diff.gpg.binary true
     git config --local diff.gpg.textconv "`which gpg` -d --quiet --yes --compress-algo=none --no-encrypt-to"
     ```
