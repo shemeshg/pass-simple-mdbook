@@ -48,3 +48,11 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 - password
 - totp
 - datetime
+
+# R.click tree view
+
+- Add folder
+- Delete selected
+- Move selected
+  
+  It is possible to `move` only within the same `.gpg` authorization folder. 
