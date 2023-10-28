@@ -53,6 +53,6 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
 - Add folder
 - Delete selected
-- Move selected
+- Move selected using drag and drop.
   
   It is possible to `move` only within the same `.gpg` authorization folder. 
