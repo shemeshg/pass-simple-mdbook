@@ -51,8 +51,11 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
 # R.click tree view
 
-- Add folder
-- Delete selected
+(Not git aware)
+
+- Add folder.
+- Delete selected.
+- Rename selected.
 - Move selected using drag and drop.
   
-  It is possible to `move` only within the same `.gpg` authorization folder. 
+  `move` available only within the same `.gpg` authorization folder. 
