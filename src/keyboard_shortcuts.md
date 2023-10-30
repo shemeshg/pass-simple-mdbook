@@ -10,6 +10,8 @@
 
 **Cmd L** Toggle text and YAML in preview mode.
 
+**Cmd U** Open Url field found (YAML mode only).
+
 **Cmd E** Toggle Preview On/Off.
 
 **Cmd O** Open externally with `vscode` when Preview is OFF.
