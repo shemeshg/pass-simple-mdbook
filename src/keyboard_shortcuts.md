@@ -4,6 +4,8 @@
 
 **Cmd F** Toggle Find/search.
 
+**Cmd T** Toggle tree view.
+
 **Cmd M** Toggle Markdown.
 
 **Cmd Y** Sync - Add,commit,pull and push.
