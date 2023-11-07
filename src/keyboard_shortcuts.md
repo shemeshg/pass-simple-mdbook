@@ -6,6 +6,8 @@
 
 **Cmd T** Toggle tree view.
 
+**Cmd ,** Toggle Settings.
+
 **Cmd M** Toggle Markdown.
 
 **Cmd Y** Sync - Add,commit,pull and push.
