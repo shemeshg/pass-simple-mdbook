@@ -23,7 +23,7 @@ If you are using other distro like `Fedora`, you can extract the contents of the
     set autotype to 
     
     ```bash
-    dotool type sequence
+    ydotool type sequence
     ```
 
 ## If compile yourself
