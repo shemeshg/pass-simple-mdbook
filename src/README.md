@@ -32,8 +32,8 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
 - Since `pass simple` store `totp` in `yaml`, to read generated totp use
 
-    ```bash
-    gopass show fileName|yq '.["totp"]' | xargs -I {} oathtool -b --totp {}
+    ```bash    
+    gopass show fileName|yq '.["totp"]' | oathtool -b --totp -
     ```
 - text starts with `-` or `#` can not be `YAML`, and is considered standard text.
 
