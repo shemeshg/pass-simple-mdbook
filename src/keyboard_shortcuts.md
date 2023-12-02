@@ -14,6 +14,8 @@
 
 **Cmd L** Toggle text and YAML in preview mode.
 
+**Cmd Shift L** Logout - End gpg session, clear clipboard and search fields.
+
 **Cmd U** Open Url field found (YAML mode only).
 
 **Cmd E** Toggle Preview On/Off.
