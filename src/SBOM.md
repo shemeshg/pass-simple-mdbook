@@ -11,4 +11,5 @@
 - Icons by <https://developers.google.com/fonts/docs/material_icons>
 - [keepassxc totp](https://github.com/keepassxreboot/keepassxc/tree/develop/src/totp)
 - [cog](https://nedbatchelder.com/code/cog)
-
+- [thread-pool](https://github.com/bshoshany/thread-pool)
+- [rnp](https://github.com/rnpgp/rnp)
