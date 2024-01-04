@@ -2,7 +2,7 @@
 
 Multi-platform GUI for [pass](https://www.passwordstore.org/), the standard unix password manager
 
-The advantages of `pass simple` include the use of GPGME (native C++), as well as support for YAML and Markdown.
+The advantages of `pass simple` include the use of GPGME (native C++, seamless integration with Security cards) or [rnp](https://github.com/rnpgp/rnp) (realtime,multithreading and windows support), as well as support for YAML and Markdown.
 
 Homepage: <https://sourceforge.net/projects/pass-simple/>
 
