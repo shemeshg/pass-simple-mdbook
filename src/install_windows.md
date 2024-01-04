@@ -1,17 +1,25 @@
 # Windows specific
 
-Because application using `gpgme` library, it is not possible to run native on windows. and `wsl2` is required.
+Windows runs natively with `Rnpgp` and `gnupg` backend.
+Backup your `gnupg` keys before converting from `sqlite` to `kbx`
 
-1. install wsl (ubuntu linux)
+1. install `gpg4win`
 
-    <https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>
+    `winget install gpg4win`
 
-1. fix passphrase prompt
+1. install chocolatey
 
-    Unlike standard `ubuntu`, the `Pinatery` in `wsl2` is set to `terminal mode` by default. therefore this step is mandatory
+    https://chocolatey.org/install
 
-    <https://stackoverflow.com/questions/63440623/no-gpg-passphrase-prompt-in-visual-studio-code-on-windows-10-for-signed-git-comm>
+1. install `gopass`
 
-1. Continue with [install_linux](install_linux.md).
+    https://github.com/gopasspw/gopass/blob/master/docs/setup.md
 
-    
+1. convert `gpg4win` `sqlite` to `kbx` useing `gpg-disable-keyboxd`.
+
+    https://gpg4win.org/version4.2.html
+
+1. init you `gopass` store and create a test document.
+
+1. Extract the deployed windows zip folder, and run `pass-simple.exe`
+   
