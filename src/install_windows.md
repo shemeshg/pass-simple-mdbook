@@ -3,6 +3,14 @@
 Windows runs natively with `Rnpgp` and `gnupg` backend.
 Backup your `gnupg` keys before converting from `sqlite` to `kbx`
 
+## Fix known bugs
+
+- create the `GNUPG` folder under %APPDATA%.
+you can Copy inside that directory, your store from ".gnupg" msys2 or linux.
+however the directory must exists.
+
+# install software
+
 1. install `gpg4win`
 
     `winget install gpg4win`
