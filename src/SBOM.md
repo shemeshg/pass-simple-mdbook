@@ -10,6 +10,7 @@
 - Icons by <https://icons8.com/icons/>
 - Icons by <https://developers.google.com/fonts/docs/material_icons>
 - [keepassxc totp](https://github.com/keepassxreboot/keepassxc/tree/develop/src/totp)
+- [keepassxc allow screen capture](https://github.com/keepassxreboot/keepassxc/tree/develop/src/gui/osutils)
 - [cog](https://nedbatchelder.com/code/cog)
 - [thread-pool](https://github.com/bshoshany/thread-pool)
 - [rnp](https://github.com/rnpgp/rnp)
