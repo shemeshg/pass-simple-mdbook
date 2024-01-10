@@ -20,10 +20,9 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
   ```
 
 - `chmod +x` script name
-
-- create gpg file with your `keyId` containing your `.rnp` password.
-- Reference Rnp home store to `.rnp`.
-- Set `Rnp pass std exec path` in settings.
+- Encrypt the `/Your/password-store/$1.gpg` where `$1` as your `keyId`.  
+  with a content of your password.
+- Set `Rnp pass std exec path` in settings, to your script.
 
 ## Markdown
 
