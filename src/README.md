@@ -10,6 +10,21 @@ Github and support: <https://github.com/shemeshg/pass-simple-qt>
 
 Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
+## Rnp & Security card integration
+
+- create a script that accept `keyId` as parameter.
+
+  ```bash
+  #!/bin/sh
+  /usr/local/bin/gpg -d /Your/password-store/$1.gpg
+  ```
+
+- `chmod +x` script name
+
+- create gpg file with your `keyId` containing your `.rnp` password.
+- Reference Rnp home store to `.rnp`.
+- Set `Rnp pass std exec path` in settings.
+
 ## Markdown
 
 - Markdown is CommonMark plus the GitHub extensions for tables and task lists (see <https://doc.qt.io/qt-6/qml-qtquick-text.html>).
