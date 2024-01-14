@@ -16,11 +16,11 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
   ```bash
   #!/bin/sh
-  /usr/local/bin/gpg -d /Your/password-store/$1.gpg
+  /usr/local/bin/gpg -d /outside/your/password-store/$1.gpg
   ```
 
 - `chmod +x` script name
-- Encrypt the `/Your/password-store/$1.gpg` where `$1` as your `keyId`.  
+- Encrypt the `/outside/your/password-store/$1.gpg` where `$1` as your `keyId`.  
   with a content of your password.
 - Set `Rnp pass std exec path` in settings, to your script.
 
