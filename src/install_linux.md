@@ -1,6 +1,6 @@
 # Ubuntu specific
 
-If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file and run the executable. since the `.deb` file is already `qt-deployed`. 
+If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file ot download the linux `zip` copy content to `/opt` run the executable. since the `.deb` file is already `qt-deployed`.
 
 1. Download the deb file and install
 
@@ -36,7 +36,11 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
     <https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules>
 
-3. `qt-cmake` and build.
+3. Install Rnp.
+
+    <https://github.com/rnpgp/rnp/blob/main/docs/installation.adoc>
+
+4. `qt-cmake` and build.
 
     ```bash
     ~/Qt/6.5.0/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/

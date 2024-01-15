@@ -6,6 +6,8 @@
 
 ## For all platforms - recommended
 
+On windows use `gopass` instead of `pass`.
+
 1. Create a note with pass command line, ensure all well
 
     ```bash
@@ -18,9 +20,9 @@
 
       This document will walk through creating Private and public keys, and init the repository (setup the `.gpgid` authorization file).
 
-1. Ensure you can read and write the test note created before.
+2. Ensure you can read and write the test note created before.
 
-1. setup git
+3. setup git
 
     Prefer manually to ensure `gpg` absolute path, also mandatory after `git clone`
 
@@ -39,16 +41,16 @@
     pass git init
     ```
 
-1. Ensure you can `git commit -am "commit"`.
+4. Ensure you can `git commit -am "commit"`.
 
-1. create additional change and ensure you can `git diff HEAD~` and see last change in clear text.
+5. create additional change and ensure you can `git diff HEAD~` and see last change in clear text.
 
-1. Set `restoreWindows` in `vscode` to `folder` or `none`
+6. Set `restoreWindows` in `vscode` to `folder` or `none`
 
     It is always good practice to close all `vscode` opened tabs before closing `pass simple`
     otherwise `vscode` might recreate temporary files edited.
 
-Optional/Advanced
+## Optional/Advanced
 
 1. Protect your '.gpg_id' or specific folders with Git-Enforced Policy (`git server and client hooks`)
 
@@ -58,16 +60,16 @@ Optional/Advanced
     
     password for the disk encryption can be stored in the default repository (`~/.password-store/`), and then link mounted encrypted repository with `ln -s` (like `mounts` in `gopass`)
 
-2. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive) 
+1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive) 
 
     Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices, 
     or [ASDK](https://www.gnupg.org/blog/20230321-adsk.html) for team members.
 
-3. Backup your store to other drive or remote ssh server
+1. Backup your store to other drive or remote ssh server
 
     <https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git>
 
     Ensure you can `git pull` and `git push`    
 
-4. protect application configuration file as readonly with `chmod`, or 
+1. protect application configuration file as readonly with `chmod`, or 
 [AppArmor](https://ubuntu.com/server/docs/security-apparmor)

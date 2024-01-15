@@ -34,4 +34,6 @@
 
 ```bash
 brew install gpgme libgpg-error pinentry-mac
+brew tap rnpgp/rnp
+brew install rnp
 ```

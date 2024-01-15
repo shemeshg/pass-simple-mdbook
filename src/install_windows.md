@@ -30,11 +30,11 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`
 
 3. empty `.gpgid` file with none standard key id format.
 
-4. list keys, and inspect store location.
+4. list keys, and inspect store location and key format.
 
    `gpg --list-keys`
 
-5. convert `gpg4win` `sqlite` to `kbx` useing `gpg-disable-keyboxd`.
+5. convert `gpg4win` `sqlite` to `kbx` using `gpg-disable-keyboxd`.
 
     <https://gpg4win.org/version4.2.html>
 

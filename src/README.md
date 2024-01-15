@@ -46,17 +46,17 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 
 - Since `pass simple` store `totp` in `yaml`, to read generated totp use
 
-    ```bash    
+    ```bash
     gopass show fileName|yq '.["totp"]' | oathtool -b --totp -
     ```
 - text starts with `-` or `#` can not be `YAML`, and is considered standard text.
 
 ## Fields type
 
-- textedit - supports 
-  - `autotype` of selected text. 
-  - `MarkDown` read only view.
-- texteditMasked 
+- textedit - supports
+  - `autotype` of selected text
+  - `MarkDown` read only view
+- texteditMasked
 - text
 - url
 - password
