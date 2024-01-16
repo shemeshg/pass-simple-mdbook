@@ -6,7 +6,19 @@
 
 ## For all platforms - recommended
 
-On windows use `gopass` instead of `pass`.
+* Rnp do not self sign your Id, so import public ID in `pass-simple` using `gnupg` mode.
+
+  On windows `gnupg` mode not applicable, so:
+
+  ```bash
+  $ gpg --edit-key jane@acme.org
+  gpg> lsign
+  gpg> y
+  gpg> save
+  ```
+
+* On windows use `gopass` instead of `pass`.
+## Mandatory
 
 1. Create a note with pass command line, ensure all well
 
@@ -15,7 +27,7 @@ On windows use `gopass` instead of `pass`.
     pass edit whatever
     ```
 
-    * If pass store not initialized, follow this:
+    * If pass store not initialized use `gopass setup` or follow this:
     <https://www.redhat.com/sysadmin/management-password-store>
 
       This document will walk through creating Private and public keys, and init the repository (setup the `.gpgid` authorization file).
