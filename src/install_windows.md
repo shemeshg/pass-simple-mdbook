@@ -1,7 +1,7 @@
 # Windows specific
 
 Windows runs natively with `Rnpgp` and `gnupg` backend.
-Backup your `gnupg` keys before converting from `sqlite` to `kbx`
+Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 
 ## install software
 

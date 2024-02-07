@@ -20,4 +20,4 @@
 
 **Cmd E** Toggle Preview On/Off.
 
-**Cmd O** Open externally with `vscode` when Preview is OFF.
+**Cmd O** Open externally with `vscode` (available when Preview is ON or OFF).
