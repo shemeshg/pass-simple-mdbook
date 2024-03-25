@@ -63,6 +63,13 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 - totp
 - datetime
 
+## Changing password
+
+`Autotype` types the last **saved** value.
+
+After duplicate current filed with an "OLD_" prefix ("OLD_password") in `edit field type`, remember to save.
+
+
 # R.click tree view
 
 (Not git aware)
