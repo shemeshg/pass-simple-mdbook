@@ -12,6 +12,8 @@ If you are using other distro like `Fedora`, you can extract the contents of the
     suto apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev
     ```
 
+    No need to install `rnp`, it is already static linked.
+
 3. Install `ydotool` autotype.
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
