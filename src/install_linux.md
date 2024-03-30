@@ -1,27 +1,29 @@
 # Ubuntu specific
 
-If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file ot download the linux `zip` copy content to `/opt` run the executable. since the `.deb` file is already `qt-deployed`.
+The `.deb` file and the `.zip` files are already `qt-deployed`.
+If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file or download the linux `zip`, extract it to `/opt` and run.
+
 
 1. Download the deb file and install
 
-1. Install dependencies if compile yourself (not using the deb file)
+2. Install dependencies if compile yourself (or not using the deb file)
 
     ```bash
     suto apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev
     ```
 
-1. Install `ydotool` autotype.
+3. Install `ydotool` autotype.
 
-    For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on> 
-    
+    For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
+
 - `sudo service ydotool start`
 - `sudo systemctl enable ydotool`
 - ensure `export YDOTOOL_SOCKET=/tmp/.ydotool_socket` in `/opt/pass-simple/bin/pass-simple.sh`.
 
-- Open `pass-simple` and select `setting`. 
-    
-    set autotype to 
-    
+- Open `pass-simple` and select `setting`.
+
+    set autotype to
+
     ```bash
     ydotool type sequence
     ```
