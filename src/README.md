@@ -51,13 +51,13 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```
 - text starts with `-` or `#` can not be `YAML`, and is considered standard text.
 
-- For YAML compatability with password in first line tools, it is possible to put a null field in the first line
+- For YAML compatability with password in first line tools, it is possible to put a dummy null field.
 
-```yaml
-_: ~
-user: user1
-password: 12345
-```
+  ```yaml
+  _: ~
+  user: user1
+  password: 12345
+  ```
 
 ## Fields type
 
