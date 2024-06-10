@@ -32,4 +32,6 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 
 1. use `gopass` to create and edit a test document.
 
-1. Extract the deployed windows zip folder, and run `pass-simple.exe` from windows explorer. (application is not signed, so confirm security screen).
+1. Run NSIS installer executable  
+
+    or manually Extract the deployed windows zip folder, and run `pass-simple.exe` from windows explorer. (application is not signed, so confirm security screen).
