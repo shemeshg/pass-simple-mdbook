@@ -6,15 +6,18 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
 1. Download the deb file and install
 
-2. Install dependencies if compile yourself (or not using the deb file)
+    ```bash
+    sudo dpkg -r pass-simple
+    sudo dpkg -i ./pass-simple-1.x.x-Linux.deb
+    ```
+
+1. Install dependencies if compile yourself (or not using the deb file)
 
     ```bash
     suto apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev
     ```
 
-    No need to install `rnp`, it is already static linked.
-
-3. Install `ydotool` autotype.
+1. Install `ydotool` autotype.
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
 
@@ -32,6 +35,8 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
 ## If compile yourself
 
+1. If compile `rnpgp` yourself follow <https://www.rnpgp.org/software/rnp/docs/installation/> and install the `botan` version as requested in the document.
+
 1. install qt <https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux>
 
     Notice: Qt6 packages in the deb repository are broken, so download the install from Qt.com
@@ -39,10 +44,6 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 2. pull submodules
 
     <https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules>
-
-3. Install Rnp.
-
-    <https://github.com/rnpgp/rnp/blob/main/docs/installation.adoc>
 
 4. `qt-cmake` and build.
 
