@@ -4,12 +4,14 @@ The `.deb` file and the `.zip` files are already `qt-deployed`.
 If you are using other distro like `Fedora`, you can extract the contents of the `.deb` file or download the linux `zip`, extract it to `/opt` and run.
 
 
-1. Download the deb file and install
+1. Download the deb file and install 
 
     ```bash
     sudo dpkg -r pass-simple
-    sudo dpkg -i ./pass-simple-1.x.x-Linux.deb
+    sudo dpkg -i ./pass-simple-1.x.x-Linux.deb    
     ```
+
+    on ubuntu 24.04 `sudo apt --fix-broken install` and repeat.
 
 1. Install dependencies if compile yourself (or not using the deb file)
 
@@ -21,6 +23,7 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
 
+- `sudo cp /usr/lib/systemd/user/ydotoold.service /etc/systemd/system`
 - `sudo service ydotool start`
 - `sudo systemctl enable ydotool`
 - ensure `export YDOTOOL_SOCKET=/tmp/.ydotool_socket` in `/opt/pass-simple/bin/pass-simple.sh`.
