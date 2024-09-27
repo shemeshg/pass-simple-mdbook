@@ -88,3 +88,10 @@ After duplicate current filed with an "OLD_" prefix ("OLD_password") in `edit fi
 - Move selected using drag and drop.
   
   `move` available only within the same `.gpg` authorization folder. 
+
+# Case insensitive search
+
+- Default search is case-sensitive (using `std::find`). To make it case-insensitive, add an additional `.*` to the regex.
+
+For example: `.*WhatEver.*.*` (beware of the `std::regex` bug in Linux `gcc 14`).
+
