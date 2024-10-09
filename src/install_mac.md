@@ -17,13 +17,16 @@
     ```bash
     brew install --cask shemeshg/homebrew-tap/pass-simple
     ```
-1. Optionally disable Dark mode.
 
-    ```bash
-    defaults write PassSimple.shemeshg.com NSRequiresAquaSystemAppearance -bool Yes
+1. "XYZ Is Damaged and Can’t Be Opened. You Should Move It To The Trash"
+
+    See https://discussions.apple.com/thread/253714860?sortBy=rank
+
+    ```
+    xattr -c /Applications/pass-simple.app/
     ```
 
-1. Mac has no `/dev/shm` you can create temporary ram drive after every boot with.
+2. Mac has no `/dev/shm` you can create temporary ram drive after every boot with.
 
     ```bash
     diskutil erasevolume HFS+ RAM_Disk_4G `hdiutil attach -nomount ram://8192000`

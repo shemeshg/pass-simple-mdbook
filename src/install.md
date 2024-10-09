@@ -18,6 +18,7 @@
   ```
 
 * On windows use `gopass` instead of `pass`.
+
 ## Mandatory
 
 1. Create a note with pass command line, ensure all well
@@ -36,7 +37,11 @@
 
 3. setup git
 
-    Prefer manually to ensure `gpg` absolute path, also mandatory after `git clone`
+    Avoid this set by using `gopass clone`
+
+- if not using `gopass`.
+
+    Prefer manually to ensure `gpg` absolute path, also mandatory after `git clone`.
 
     ```bash
     # New repository
@@ -69,19 +74,19 @@
     <https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy>
 
 1. Use disk encryption - `tomb`/`veracrypt` or mac's `diskutil` to protect the repository itself.
-    
+
     password for the disk encryption can be stored in the default repository (`~/.password-store/`), and then link mounted encrypted repository with `ln -s` (like `mounts` in `gopass`)
 
-1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive) 
+1. Consider using `yubikey` or [move secret keys to USB drive](https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive)
 
-    Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices, 
+    Use rotate [subkey](https://help.ubuntu.com/community/GnuPrivacyGuardHowto) for different devices,
     or [ASDK](https://www.gnupg.org/blog/20230321-adsk.html) for team members.
 
 1. Backup your store to other drive or remote ssh server
 
     <https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git>
 
-    Ensure you can `git pull` and `git push`    
+    Ensure you can `git pull` and `git push`
 
-1. protect application configuration file as readonly with `chmod`, or 
+1. protect application configuration file as readonly with `chmod`, or
 [AppArmor](https://ubuntu.com/server/docs/security-apparmor)
