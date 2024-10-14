@@ -5,7 +5,7 @@
     ```bash
     brew install pass pinentry-mac
 
-    echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+    echo "pinentry-program `which pinentry-mac`" >> ~/.gnupg/gpg-agent.conf
 
     gpgconf --kill gpg-agent
 
