@@ -16,7 +16,7 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 1. Install dependencies if compile yourself (or not using the deb file)
 
     ```bash
-    suto apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev
+    sudo apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev libbz2-dev libjson-c-dev
     ```
 
 1. Install `ydotool` autotype.
