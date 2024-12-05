@@ -35,3 +35,9 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 1. Run NSIS installer executable  
 
     or manually Extract the deployed windows zip folder, and run `pass-simple.exe` from windows explorer. (application is not signed, so confirm security screen).
+
+1. Windows Os does not recognize `dot` initial as `hidden`, so at the root of the repository.
+
+```
+Get-ChildItem -Path . -Force -Filter ".*" | ForEach-Object { $_.Attributes = 'Hidden' }
+```
