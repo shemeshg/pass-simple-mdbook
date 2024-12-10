@@ -26,12 +26,17 @@
     xattr -c /Applications/pass-simple.app/
     ```
 
-2. Mac has no `/dev/shm` you can create temporary ram drive after every boot with.
+1. Mac has no `/dev/shm` you can create temporary ram drive after every boot with.
 
     ```bash
     diskutil erasevolume HFS+ RAM_Disk_4G `hdiutil attach -nomount ram://8192000`
     ```
 
+1. alias in `.zprofile` for autotype
+
+    ```bash
+    alias pass-simple='nohup /Applications/pass-simple.app/Contents/MacOS/pass-simple > /dev/null 2>&1 &'
+    ```
 
 ## dev packages
 
