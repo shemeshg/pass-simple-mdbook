@@ -24,6 +24,7 @@
 
     ```
     xattr -c /Applications/pass-simple.app/
+    codesign --force --deep --sign - /Applications/pass-simple.app
     ```
 
 1. Mac has no `/dev/shm` you can create temporary ram drive after every boot with.
