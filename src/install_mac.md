@@ -33,7 +33,7 @@
     diskutil erasevolume HFS+ RAM_Disk_4G `hdiutil attach -nomount ram://8192000`
     ```
 
-1. alias in `.zprofile` for autotype
+1. alias for cli
 
     ```bash
     alias pass-simple='nohup /Applications/pass-simple.app/Contents/MacOS/pass-simple > /dev/null 2>&1 &'
