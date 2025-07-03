@@ -5,17 +5,15 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 
 ## install software
 
-1. install `gpg4win`
-
-    `winget install gpg4win`
-
-1. install chocolatey (via copy past into PowerShell)
-
-    <https://chocolatey.org/install>
-
 1. install `gopass`
 
-   `choco install gopass`
+    ```
+    winget install Git.Git
+    winget install GnuPG.Gpg4win
+    winget install gopass.gopass
+    ```
+
+
 
     <https://github.com/gopasspw/gopass/blob/master/docs/setup.md>
 
@@ -33,6 +31,11 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 1. use `gopass` to create and edit a test document.
 
 1. Run NSIS installer executable  
+
+    ```
+    winget install Shemeshg.PassSimple
+
+    ```
 
     or manually Extract the deployed windows zip folder, and run `pass-simple.exe` from windows explorer. (application is not signed, so confirm security screen).
 
