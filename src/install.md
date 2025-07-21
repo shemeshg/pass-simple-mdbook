@@ -19,6 +19,15 @@
 
 * On windows use `gopass` instead of `pass`.
 
+* Review `Auth` tab in the app and manually fix any `bad entries`.  
+
+  `rnp` only search key IDs in the `.gpgid` file that are 16 (or less) characters long.  
+
+  These 16 characters are the ones on the right side, as shown by `gnupg`.  
+
+  The `gopass` format, which uses a key ID starting with `0x`, is also supported.  
+
+
 ## Mandatory
 
 1. Create a note with pass command line, ensure all well
