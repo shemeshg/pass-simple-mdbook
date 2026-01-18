@@ -1,6 +1,5 @@
 [book]
 authors = ["osx user"]
 language = "en"
-multilingual = false
 src = "src"
 title = "pass simple documentation"
