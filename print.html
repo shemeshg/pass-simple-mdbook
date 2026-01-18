@@ -1,0 +1,709 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>pass simple documentation</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e8b89d96.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-3b112183.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">pass simple documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="pass-simple"><a class="header" href="#pass-simple"><img src="icon.png" alt="Alt text"> <a href="https://github.com/shemeshg/pass-simple-qt">pass simple</a></a></h1>
+<p>Multi-platform GUI for <a href="https://www.passwordstore.org/">pass</a>, the standard unix password manager</p>
+<p>The advantages of <code>pass simple</code> include the use of GPGME (native C++, seamless integration with Security cards) or <a href="https://github.com/rnpgp/rnp">rnp</a> (realtime,multithreading and windows support), as well as support for YAML and Markdown.</p>
+<p>Homepage: <a href="https://sourceforge.net/projects/pass-simple/">https://sourceforge.net/projects/pass-simple/</a></p>
+<p>Github and support: <a href="https://github.com/shemeshg/pass-simple-qt">https://github.com/shemeshg/pass-simple-qt</a></p>
+<p>Screenshots: <a href="https://github.com/shemeshg/pass-simple-qt/wiki">https://github.com/shemeshg/pass-simple-qt/wiki</a></p>
+<h2 id="rnp--security-card-integration"><a class="header" href="#rnp--security-card-integration">Rnp &amp; Security card integration</a></h2>
+<ul>
+<li>
+<p>create a script that accept <code>keyId</code> as parameter.</p>
+<pre><code class="language-bash">#!/bin/sh
+/usr/local/bin/gpg -d /outside/your/password-store/$1.gpg
+</code></pre>
+</li>
+<li>
+<p><code>chmod +x</code> script name</p>
+</li>
+<li>
+<p>Encrypt the <code>/outside/your/password-store/$1.gpg</code> where <code>$1</code> as your <code>keyId</code>.<br>with a content of your password.</p>
+</li>
+<li>
+<p>Set <code>Rnp pass std exec path</code> in settings, to your script.</p>
+</li>
+</ul>
+<h2 id="markdown"><a class="header" href="#markdown">Markdown</a></h2>
+<ul>
+<li>
+<p>Markdown is CommonMark plus the GitHub extensions for tables and task lists (see <a href="https://doc.qt.io/qt-6/qml-qtquick-text.html">https://doc.qt.io/qt-6/qml-qtquick-text.html</a>).</p>
+</li>
+<li>
+<p>Inline Images are not supported</p>
+</li>
+<li>
+<p>Links with relative path to other <code>.pgp</code> in the same <code>password store</code> are supported,</p>
+<p>link should not include the <code>.pgp</code> extension, for example</p>
+<pre><code class="language-Md"># Header
+
+[ref to a/b file.pgp](&lt;a/b file&gt;)
+
+or &lt;a/b file&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="yaml"><a class="header" href="#yaml">Yaml</a></h2>
+<ul>
+<li>
+<p>Since <code>pass simple</code> store <code>totp</code> in <code>yaml</code>, to read generated totp use</p>
+<pre><code class="language-bash">gopass show fileName|yq '.["totp"]' | oathtool -b --totp -
+</code></pre>
+</li>
+<li>
+<p>text starts with <code>-</code> or <code>#</code> can not be <code>YAML</code>, and is considered standard text.</p>
+</li>
+<li>
+<p>For YAML compatability with password in first line tools, it is possible to put a dummy null field.</p>
+<pre><code class="language-yaml">_: ~
+user: user1
+password: 12345
+</code></pre>
+</li>
+</ul>
+<h2 id="fields-type"><a class="header" href="#fields-type">Fields type</a></h2>
+<ul>
+<li>textedit - supports
+<ul>
+<li><code>autotype</code> of selected text</li>
+<li><code>MarkDown</code> read only view</li>
+</ul>
+</li>
+<li>texteditMasked</li>
+<li>text</li>
+<li>url</li>
+<li>password</li>
+<li>totp</li>
+<li>datetime</li>
+</ul>
+<h2 id="changing-password"><a class="header" href="#changing-password">Changing password</a></h2>
+<p><code>Autotype</code> types the last <strong>saved</strong> value.</p>
+<p>After duplicate current filed with an “OLD_” prefix (“OLD_password”) in <code>edit field type</code>, remember to save.</p>
+<h1 id="rclick-tree-view"><a class="header" href="#rclick-tree-view">R.click tree view</a></h1>
+<p>(Not git aware)</p>
+<ul>
+<li>
+<p>Add folder.</p>
+</li>
+<li>
+<p>Delete selected.</p>
+</li>
+<li>
+<p>Rename selected.</p>
+</li>
+<li>
+<p>Move selected using drag and drop.</p>
+<p><code>move</code> available only within the same <code>.gpg</code> authorization folder.</p>
+</li>
+</ul>
+<h1 id="case-insensitive-search"><a class="header" href="#case-insensitive-search">Case insensitive search</a></h1>
+<ul>
+<li>Default search is case-sensitive (using <code>std::find</code>). To make it case-insensitive, add an additional <code>.*</code> to the regex.</li>
+</ul>
+<p>For example: <code>.*WhatEver.*.*</code> (beware of the <code>std::regex</code> bug in Linux <code>gcc 14</code>).</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="install-platform-specific"><a class="header" href="#install-platform-specific">install platform specific</a></h1>
+<ul>
+<li><a href="#ubuntu-specific">install_linux</a></li>
+<li><a href="#mac-specific">install_mac</a></li>
+<li><a href="#windows-specific">install_windows</a></li>
+</ul>
+<h2 id="for-all-platforms---recommended"><a class="header" href="#for-all-platforms---recommended">For all platforms - recommended</a></h2>
+<ul>
+<li>
+<p>Rnp do not self sign your Id, so import public ID in <code>pass-simple</code> using <code>gnupg</code> mode.</p>
+<p>On windows <code>gnupg</code> mode not applicable, so:</p>
+<pre><code class="language-bash">$ gpg --edit-key jane@acme.org
+gpg&gt; lsign
+gpg&gt; y
+gpg&gt; save
+</code></pre>
+</li>
+<li>
+<p>On windows use <code>gopass</code> instead of <code>pass</code>.</p>
+</li>
+<li>
+<p>Review <code>Auth</code> tab in the app and manually fix any <code>bad entries</code>.</p>
+<p><code>rnp</code> only search key IDs in the <code>.gpgid</code> file that are 16 (or less) characters long.</p>
+<p>These 16 characters are the ones on the right side, as shown by <code>gnupg</code>.</p>
+<p>The <code>gopass</code> format, which uses a key ID starting with <code>0x</code>, is also supported.</p>
+</li>
+</ul>
+<h2 id="mandatory"><a class="header" href="#mandatory">Mandatory</a></h2>
+<ol>
+<li>
+<p>Create a note with pass command line, ensure all well</p>
+<pre><code class="language-bash">pass
+pass edit whatever
+</code></pre>
+<ul>
+<li>
+<p>If pass store not initialized use <code>gopass setup</code> or follow this:
+<a href="https://www.redhat.com/sysadmin/management-password-store">https://www.redhat.com/sysadmin/management-password-store</a></p>
+<p>This document will walk through creating Private and public keys, and init the repository (setup the <code>.gpgid</code> authorization file).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ensure you can read and write the test note created before.</p>
+</li>
+<li>
+<p>setup git</p>
+<p>Avoid this set by using <code>gopass clone</code></p>
+</li>
+</ol>
+<ul>
+<li>
+<p>if not using <code>gopass</code>.</p>
+<p>Prefer manually to ensure <code>gpg</code> absolute path, also mandatory after <code>git clone</code>.</p>
+<pre><code class="language-bash"># New repository
+git init  
+echo '*.gpg diff=gpg' &gt; ".gitattributes"
+# New and Cloned repository
+git config --local diff.gpg.binary true
+git config --local diff.gpg.textconv "`which gpg` -d --quiet --yes --compress-algo=none --no-encrypt-to"
+</code></pre>
+<p>Or using pass, and correct the <code>diff.gpg.textconv</code> with above.</p>
+<pre><code class="language-bash">export PASSWORD_STORE_DIR=/Volumes/volume\ name/password-store
+pass git init
+</code></pre>
+</li>
+</ul>
+<ol start="4">
+<li>
+<p>Ensure you can <code>git commit -am "commit"</code>.</p>
+</li>
+<li>
+<p>create additional change and ensure you can <code>git diff HEAD~</code> and see last change in clear text.</p>
+</li>
+<li>
+<p>Set <code>restoreWindows</code> in <code>vscode</code> to <code>folder</code> or <code>none</code></p>
+<p>It is always good practice to close all <code>vscode</code> opened tabs before closing <code>pass simple</code>
+otherwise <code>vscode</code> might recreate temporary files edited.</p>
+</li>
+</ol>
+<h2 id="optionaladvanced"><a class="header" href="#optionaladvanced">Optional/Advanced</a></h2>
+<ol>
+<li>
+<p>Protect your ‘.gpg_id’ or specific folders with Git-Enforced Policy (<code>git server and client hooks</code>)</p>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy">https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy</a></p>
+</li>
+<li>
+<p>Use disk encryption - <code>tomb</code>/<code>veracrypt</code> or mac’s <code>diskutil</code> to protect the repository itself.</p>
+<p>password for the disk encryption can be stored in the default repository (<code>~/.password-store/</code>), and then link mounted encrypted repository with <code>ln -s</code> (like <code>mounts</code> in <code>gopass</code>)</p>
+</li>
+<li>
+<p>Consider using <code>yubikey</code> or <a href="https://gpgtools.tenderapp.com/kb/gpg-keychain-faq/how-to-move-secret-keys-to-usb-drive">move secret keys to USB drive</a></p>
+<p>Use rotate <a href="https://help.ubuntu.com/community/GnuPrivacyGuardHowto">subkey</a> for different devices,
+or <a href="https://www.gnupg.org/blog/20230321-adsk.html">ASDK</a> for team members.</p>
+</li>
+<li>
+<p>Backup your store to other drive or remote ssh server</p>
+<p><a href="https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git">https://stackoverflow.com/questions/39471072/how-to-create-a-local-push-destination-on-a-hard-disk-using-git</a></p>
+<p>Ensure you can <code>git pull</code> and <code>git push</code></p>
+</li>
+<li>
+<p>protect application configuration file as readonly with <code>chmod</code>, or
+<a href="https://ubuntu.com/server/docs/security-apparmor">AppArmor</a></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="windows-specific"><a class="header" href="#windows-specific">Windows specific</a></h1>
+<p>Windows runs natively with <code>Rnpgp</code> and <code>gnupg</code> backend.
+Backup your <code>gnupg</code> keys before converting from <code>sqlite</code> to <code>kbx</code>.</p>
+<h2 id="install-software"><a class="header" href="#install-software">install software</a></h2>
+<ol>
+<li>
+<p>install <code>gopass</code></p>
+<pre><code>winget install Git.Git
+winget install GnuPG.Gpg4win
+winget install gopass.gopass
+</code></pre>
+<p><a href="https://github.com/gopasspw/gopass/blob/master/docs/setup.md">https://github.com/gopasspw/gopass/blob/master/docs/setup.md</a></p>
+</li>
+<li>
+<p>initialize <code>gopass</code> with <code>gopass setup</code></p>
+</li>
+<li>
+<p>list keys, and inspect store location and key format.</p>
+<p><code>gpg --list-keys</code></p>
+</li>
+<li>
+<p>convert <code>gpg4win</code> <code>sqlite</code> to <code>kbx</code> using <code>gpg-disable-keyboxd</code>.</p>
+<p><a href="https://gpg4win.org/version4.2.html">https://gpg4win.org/version4.2.html</a></p>
+</li>
+<li>
+<p>use <code>gopass</code> to create and edit a test document.</p>
+</li>
+<li>
+<p>Run NSIS installer executable</p>
+<pre><code>winget install Shemeshg.PassSimple
+
+</code></pre>
+<p>or manually Extract the deployed windows zip folder, and run <code>pass-simple.exe</code> from windows explorer. (application is not signed, so confirm security screen).</p>
+</li>
+<li>
+<p>Windows Os does not recognize <code>dot</code> initial as <code>hidden</code>, so at the root of the repository.</p>
+</li>
+</ol>
+<pre><code>Get-ChildItem -Path . -Force -Filter ".*" | ForEach-Object { $_.Attributes = 'Hidden' }
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mac-specific"><a class="header" href="#mac-specific">Mac specific</a></h1>
+<ol>
+<li>
+<p>Install pass</p>
+<pre><code class="language-bash">brew install pass pinentry-mac
+
+echo "pinentry-program `which pinentry-mac`" &gt;&gt; ~/.gnupg/gpg-agent.conf
+
+gpgconf --kill gpg-agent
+
+defaults write org.gpgtools.common UseKeychain -bool NO
+</code></pre>
+</li>
+<li>
+<p>Install pass-simple</p>
+<pre><code class="language-bash">brew install --cask shemeshg/homebrew-tap/pass-simple
+</code></pre>
+</li>
+<li>
+<p>“XYZ Is Damaged and Can’t Be Opened. You Should Move It To The Trash”</p>
+<p>See https://discussions.apple.com/thread/253714860?sortBy=rank</p>
+<pre><code>xattr -c /Applications/pass-simple.app/
+codesign --force --deep --sign - /Applications/pass-simple.app
+</code></pre>
+</li>
+<li>
+<p>Mac has no <code>/dev/shm</code> you can create temporary ram drive after every boot with.</p>
+<pre><code class="language-bash">diskutil erasevolume HFS+ RAM_Disk_4G `hdiutil attach -nomount ram://8192000`
+</code></pre>
+</li>
+<li>
+<p>alias for cli</p>
+<pre><code class="language-bash">alias pass-simple='nohup /Applications/pass-simple.app/Contents/MacOS/pass-simple &gt; /dev/null 2&gt;&amp;1 &amp;'
+</code></pre>
+</li>
+</ol>
+<h2 id="dev-packages"><a class="header" href="#dev-packages">dev packages</a></h2>
+<pre><code class="language-bash">brew install gpgme libgpg-error pinentry-mac
+brew tap rnpgp/rnp
+brew install rnp
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ubuntu-specific"><a class="header" href="#ubuntu-specific">Ubuntu specific</a></h1>
+<p>The <code>.deb</code> file and the <code>.zip</code> files are already <code>qt-deployed</code>.
+If you are using other distro like <code>Fedora</code>, you can extract the contents of the <code>.deb</code> file or download the linux <code>zip</code>, extract it to <code>/opt</code> and run.</p>
+<ol>
+<li>
+<p>Download the deb file and install</p>
+<pre><code class="language-bash">sudo dpkg -r pass-simple
+sudo dpkg -i ./pass-simple-1.x.x-Linux.deb    
+</code></pre>
+<p>on ubuntu 24.04 <code>sudo apt --fix-broken install</code> and repeat.</p>
+</li>
+<li>
+<p>Install dependencies if compile yourself (or not using the deb file)</p>
+<pre><code class="language-bash">sudo apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev libbz2-dev libjson-c-dev
+</code></pre>
+</li>
+<li>
+<p><code>Ubuntu ARM</code> might not have <code>botan-2-dev</code> so install <code>botan</code></p>
+<pre><code class="language-bash">sudo apt-get -y  install botan-2-dev
+</code></pre>
+<p>or</p>
+<pre><code class="language-bash">sudo apt-get -y  install botan
+</code></pre>
+</li>
+<li>
+<p><code>Ubuntu</code> comes without utf-8 fonts so</p>
+<pre><code class="language-bash">sudo apt install fonts-noto fonts-noto-cjk fonts-noto-color-emoji fonts-noto-core
+</code></pre>
+</li>
+<li>
+<p>Install <code>ydotool</code> autotype.</p>
+<p>For Manual compilation <a href="https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on">https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on</a></p>
+<ul>
+<li>
+<p><code>sudo cp /usr/lib/systemd/user/ydotoold.service /etc/systemd/system</code></p>
+</li>
+<li>
+<p><code>sudo service ydotool start</code></p>
+</li>
+<li>
+<p><code>sudo systemctl enable ydotool</code></p>
+</li>
+<li>
+<p>ensure <code>export YDOTOOL_SOCKET=/tmp/.ydotool_socket</code> in <code>/opt/pass-simple/bin/pass-simple.sh</code>.</p>
+</li>
+<li>
+<p>Open <code>pass-simple</code> and select <code>setting</code>.</p>
+</li>
+</ul>
+<p>set autotype to</p>
+<pre><code class="language-bash">ydotool type sequence
+</code></pre>
+</li>
+<li>
+<p>prefer <code>gopass</code> over <code>pass</code></p>
+<p><a href="https://github.com/gopasspw/gopass">https://github.com/gopasspw/gopass</a></p>
+</li>
+</ol>
+<h2 id="if-compile-yourself"><a class="header" href="#if-compile-yourself">If compile yourself</a></h2>
+<ol>
+<li>
+<p>If compile <code>rnpgp</code> yourself follow <a href="https://www.rnpgp.org/software/rnp/docs/installation/">https://www.rnpgp.org/software/rnp/docs/installation/</a> and install the <code>botan</code> version as requested in the document.</p>
+</li>
+<li>
+<p>install qt <a href="https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux">https://web.stanford.edu/dept/cs_edu/resources/qt/install-linux</a></p>
+<p>Notice: Qt6 packages in the deb repository are broken, so download the install from Qt.com</p>
+</li>
+<li>
+<p>pull submodules</p>
+<p><a href="https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules">https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules</a></p>
+</li>
+<li>
+<p><code>qt-cmake</code> and build.</p>
+<pre><code class="language-bash">~/Qt/6.5.0/gcc_64/bin/qt-cmake -DCMAKE_BUILD_TYPE=Release ../pass-simple-qt/
+cmake --build .
+</code></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="keyboard-shortcuts"><a class="header" href="#keyboard-shortcuts">keyboard shortcuts</a></h1>
+<p><strong>Cmd S</strong> Save in preview mode.</p>
+<p><strong>Cmd F</strong> Toggle Find/search.</p>
+<p><strong>Cmd T</strong> Toggle tree view.</p>
+<p><strong>Cmd ,</strong> Toggle Settings.</p>
+<p><strong>Cmd M</strong> Toggle Markdown.</p>
+<p><strong>Cmd Y</strong> Sync - Add,commit,pull and push.</p>
+<p><strong>Cmd L</strong> Toggle text and YAML in preview mode.</p>
+<p><strong>Cmd Shift L</strong> Logout - End gpg session, clear clipboard and search fields.</p>
+<p><strong>Cmd U</strong> Open Url field found (YAML mode only).</p>
+<p><strong>Cmd E</strong> Toggle Preview On/Off.</p>
+<p><strong>Cmd O</strong> Open externally with <code>vscode</code> (available when Preview is ON or OFF).</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="software-bill-of-materials-sbom"><a class="header" href="#software-bill-of-materials-sbom">Software Bill of Materials (SBOM)</a></h1>
+<h2 id="core-frameworks--libraries"><a class="header" href="#core-frameworks--libraries">Core Frameworks &amp; Libraries</a></h2>
+<ul>
+<li><a href="https://www.qt.io/">Qt Quick and QT6 Open Source</a></li>
+<li><a href="https://gnupg.org/software/gpgme/index.html">GnuPG Made Easy (GPGME)</a></li>
+<li>Gpgmepp</li>
+<li>LibGpgError</li>
+<li><a href="https://github.com/jbeder/yaml-cpp/">yaml-cpp</a></li>
+<li><a href="https://github.com/rnpgp/rnp">rnp</a></li>
+</ul>
+<h2 id="platform-specific-tools"><a class="header" href="#platform-specific-tools">Platform-Specific Tools</a></h2>
+<ul>
+<li>pinentry-mac <em>(Mac only)</em>
+<ul>
+<li>On Ubuntu 20.04: already installed and configured for Wayland</li>
+</ul>
+</li>
+</ul>
+<h2 id="ui--icons"><a class="header" href="#ui--icons">UI &amp; Icons</a></h2>
+<ul>
+<li>Icons by <a href="https://icons8.com/icons/">Icons8</a></li>
+<li>Icons by <a href="https://developers.google.com/fonts/docs/material_icons">Google Material Icons</a></li>
+</ul>
+<h2 id="features-from-keepassxc"><a class="header" href="#features-from-keepassxc">Features from KeePassXC</a></h2>
+<ul>
+<li><a href="https://github.com/keepassxreboot/keepassxc/tree/develop/src/totp">TOTP Support</a></li>
+<li><a href="https://github.com/keepassxreboot/keepassxc/tree/develop/src/gui/osutils">Allow Screen Capture</a></li>
+</ul>
+<h2 id="utilities--helpers"><a class="header" href="#utilities--helpers">Utilities &amp; Helpers</a></h2>
+<ul>
+<li><a href="https://nedbatchelder.com/code/cog">Cog</a></li>
+<li><a href="https://github.com/bshoshany/thread-pool">Thread Pool</a></li>
+</ul>
+<hr>
+<pre><code class="language-Spdx">SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+DocumentName: BuiltWith-SPDX
+DocumentNamespace: http://example.com/spdxdocs/builtwith-001
+Creator: Tool: Microsoft Copilot
+Created: 2025-08-20T11:41:00Z
+
+##### Packages #####
+
+PackageName: Qt
+PackageDownloadLocation: https://www.qt.io/
+PackageLicenseDeclared: GPL-3.0-or-later
+
+PackageName: Gpgmepp
+PackageDownloadLocation: NOASSERTION
+PackageLicenseDeclared: LGPL-2.1-or-later
+
+PackageName: GPGME
+PackageDownloadLocation: https://gnupg.org/software/gpgme/index.html
+PackageLicenseDeclared: LGPL-2.1-or-later
+
+PackageName: LibGpgError
+PackageDownloadLocation: NOASSERTION
+PackageLicenseDeclared: LGPL-2.1-or-later
+
+PackageName: pinentry-mac
+PackageDownloadLocation: NOASSERTION
+PackageLicenseDeclared: GPL-2.0-or-later
+
+PackageName: yaml-cpp
+PackageDownloadLocation: https://github.com/jbeder/yaml-cpp/
+PackageLicenseDeclared: MIT
+
+PackageName: Icons8
+PackageDownloadLocation: https://icons8.com/icons/
+PackageLicenseDeclared: NOASSERTION
+
+PackageName: Google Material Icons
+PackageDownloadLocation: https://developers.google.com/fonts/docs/material_icons
+PackageLicenseDeclared: Apache-2.0
+
+PackageName: KeePassXC TOTP
+PackageDownloadLocation: https://github.com/keepassxreboot/keepassxc/tree/develop/src/totp
+PackageLicenseDeclared: GPL-2.0-or-later
+
+PackageName: KeePassXC Screen Capture
+PackageDownloadLocation: https://github.com/keepassxreboot/keepassxc/tree/develop/src/gui/osutils
+PackageLicenseDeclared: GPL-2.0-or-later
+
+PackageName: Cog
+PackageDownloadLocation: https://nedbatchelder.com/code/cog
+PackageLicenseDeclared: MIT
+
+PackageName: Thread Pool
+PackageDownloadLocation: https://github.com/bshoshany/thread-pool
+PackageLicenseDeclared: MIT
+
+PackageName: RNP
+PackageDownloadLocation: https://github.com/rnpgp/rnp
+PackageLicenseDeclared: BSD-2-Clause
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="license"><a class="header" href="#license">LICENSE</a></h1>
+<p><a href="https://github.com/shemeshg/pass-simple-qt/blob/main/LICENSE">https://github.com/shemeshg/pass-simple-qt/blob/main/LICENSE</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
