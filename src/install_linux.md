@@ -31,6 +31,12 @@ If you are using other distro like `Fedora`, you can extract the contents of the
     sudo apt-get -y  install botan
     ```
 
+1. `Ubuntu` comes without utf-8 fonts so 
+
+    ```bash
+    sudo apt install fonts-noto fonts-noto-cjk fonts-noto-color-emoji fonts-noto-core
+    ```
+
 1. Install `ydotool` autotype.
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
