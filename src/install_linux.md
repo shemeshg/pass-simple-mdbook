@@ -17,6 +17,18 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
     ```bash
     sudo apt-get -y  install pass gnupg2 libgpgme-dev libgpgmepp-dev libbz2-dev libjson-c-dev
+    ``` 
+
+1. `Ubuntu ARM` might not have `botan-2-dev` so install `botan`
+    
+    ```bash
+    sudo apt-get -y  install botan-2-dev
+    ```    
+
+    or
+
+    ```bash
+    sudo apt-get -y  install botan
     ```
 
 1. Install `ydotool` autotype.
