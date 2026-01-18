@@ -41,18 +41,22 @@ If you are using other distro like `Fedora`, you can extract the contents of the
 
     For Manual compilation <https://askubuntu.com/questions/1413829/how-can-i-install-the-latest-ydotool-1-0-1-keyboard-automation-tool-working-on>
 
-- `sudo cp /usr/lib/systemd/user/ydotoold.service /etc/systemd/system`
-- `sudo service ydotool start`
-- `sudo systemctl enable ydotool`
-- ensure `export YDOTOOL_SOCKET=/tmp/.ydotool_socket` in `/opt/pass-simple/bin/pass-simple.sh`.
+    - `sudo cp /usr/lib/systemd/user/ydotoold.service /etc/systemd/system`
+    - `sudo service ydotool start`
+    - `sudo systemctl enable ydotool`
+    - ensure `export YDOTOOL_SOCKET=/tmp/.ydotool_socket` in `/opt/pass-simple/bin/pass-simple.sh`.
 
-- Open `pass-simple` and select `setting`.
+    - Open `pass-simple` and select `setting`.
 
     set autotype to
 
     ```bash
     ydotool type sequence
     ```
+
+1. prefer `gopass` over `pass`
+
+    <https://github.com/gopasspw/gopass>
 
 ## If compile yourself
 
