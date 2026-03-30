@@ -30,14 +30,35 @@ Backup your `gnupg` keys before converting from `sqlite` to `kbx`.
 
 1. use `gopass` to create and edit a test document.
 
-1. Run NSIS installer executable  
+1. Remove previous `winget` executable  
 
     ```
-    winget install Shemeshg.PassSimple
-
+    winget remove Shemeshg.PassSimple
     ```
 
-    or manually Extract the deployed windows zip folder, and run `pass-simple.exe` from windows explorer. (application is not signed, so confirm security screen).
+    install scoop if not installed
+
+    ```
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    irm get.scoop.sh | iex
+    ```
+
+    add the bucket
+    ```
+    scoop bucket add extras
+    scoop bucket add shemeshg https://github.com/shemeshg/scoop-bucket
+    ```
+
+    install
+    ```
+    scoop install pass-simple
+    ```
+
+    keep updated with
+    ```
+    scoop update *
+    ```
+
 
 1. Windows Os does not recognize `dot` initial as `hidden`, so at the root of the repository.
 
