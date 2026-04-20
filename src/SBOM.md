@@ -22,7 +22,6 @@
 
 ## Utilities & Helpers
 - [Cog](https://nedbatchelder.com/code/cog)
-- [Thread Pool](https://github.com/bshoshany/thread-pool)
 
 ---
 
@@ -78,10 +77,6 @@ PackageLicenseDeclared: GPL-2.0-or-later
 
 PackageName: Cog
 PackageDownloadLocation: https://nedbatchelder.com/code/cog
-PackageLicenseDeclared: MIT
-
-PackageName: Thread Pool
-PackageDownloadLocation: https://github.com/bshoshany/thread-pool
 PackageLicenseDeclared: MIT
 
 PackageName: RNP
