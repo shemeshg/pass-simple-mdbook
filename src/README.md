@@ -49,8 +49,7 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```bash
     gopass show fileName|yq '.["totp"]' | oathtool -b --totp -
     ```
-- Text that begins with `-` or `#`, or contains multiple YAML documents (indicated by lines starting with `---`, as used in `gopass`), 
-cannot be parsed as valid YAML and is treated as plain text.
+- Files containing YAML comments (#) or multi-document separators (---) are not supported and will be considered plain text documents.
 
 - For YAML compatability with password in first line tools, it is possible to put a dummy null field.
 
