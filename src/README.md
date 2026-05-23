@@ -49,7 +49,7 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
     ```bash
     gopass show fileName|yq '.["totp"]' | oathtool -b --totp -
     ```
-- Files containing YAML comments (#) or multi-document separators (---) are not supported and will be considered plain text documents.
+- Files containing YAML comments (`#`) or multi-document separators (`---`) are not supported and will be considered plain text documents.
 
 - For YAML compatability with password in first line tools, it is possible to put a dummy null field.
 
