@@ -71,6 +71,12 @@ Screenshots: <https://github.com/shemeshg/pass-simple-qt/wiki>
 - totp
 - datetime
 
+### url field
+
+The `url field` supports external HTTP links, internal secret documents, or uploaded binary files.
+Binary files uploaded to the `_files` folder and can be renamed or deleted using the right‑click menu on the download icon.
+For a file to be treated as binary, its extension must be listed as such in the `application settings`.
+
 ## Changing password
 
 `Autotype` types the last **saved** value.
