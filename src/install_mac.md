@@ -15,6 +15,8 @@
 1. Install pass-simple
 
     ```bash
+    brew tap shemeshg/tap
+    brew trust shemeshg/tap    
     brew install --cask shemeshg/homebrew-tap/pass-simple
     ```
 
